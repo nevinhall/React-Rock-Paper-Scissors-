@@ -5,22 +5,20 @@ import { Card, Button, Container, Form, Jumbotron, Modal, Accordion } from 'reac
 const Main = () => {
     const [computerVal, setComputerVal] = React.useState(0);
     const [userVal, setUserVal] = React.useState(0);
-    const[show,setShow] = React.useState(false);
+    const [show, setShow] = React.useState(false);
 
 
 
-
-
-
-      const genScore = () => {  
+    const genScore = () => {
         console.log("t");
         setShow(true)
-        setComputerVal(5)
-      }
+        setComputerVal(Math.floor(Math.random() * 3))
+    }
 
 
     return (
         <div>
+            
             {show ? computerVal : 0}
 
             <Button onClick={genScore}>Play</Button>
