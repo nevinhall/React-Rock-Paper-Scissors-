@@ -11,7 +11,7 @@ function App() {
 
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch> {/* The Switch decides which component to show based on the current URL.*/}
         <Route exact path='/' component={Home}></Route>
         <Route exact path='/login' component={Login}></Route>
